@@ -1,0 +1,180 @@
+/* 폰트 */
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Noto+Serif+KR:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif:wght@100;200;400&display=swap');
+@import url('https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@2.0/nanumsquare.css');
+
+body {
+    font-family: 'Noto Serif KR', serif;
+    font-family: 'Bebas Neue', cursive;
+    font-family: 'Bree Serif', cursive;
+    font-family: 'NanumSquare', sans-serif;
+}
+
+/* 메인 페이지 */
+#main {
+  position: relative;
+    overflow: hidden;
+}
+
+.backgroundImage {
+    background-image: url("../img/background.jpg"); /* 배경 이미지 파일 경로 */
+    filter: brightness(30%); /* 배경 밝기 낮을수록 어두워짐 */
+    background-size: cover;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: -100;
+}
+
+.profile {
+    min-height: 400px;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+    .profile .profile-img {
+        animation: banner 2s linear;
+        animation: maintitle 1.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    }
+
+.profile .profile-wrap {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 50vh;
+    font-family: 'Bebas Neue', cursive;
+}
+
+.profile-back {
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Bebas Neue', cursive;
+}
+.profile-back::after {
+    content: '';
+}
+
+/* 이름 세글자 표시 */
+.profile .profile-myName {
+    font-size: 50px;
+    margin-bottom: 20px;
+    color: #fff;
+    animation: banner 2s linear;
+    animation: maintitle 1.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    text-shadow: 2px 2px 6px black;
+    font-family: 'NanumSquare', cursive;
+}
+
+    /* 이름 세글자 아래 직선 */
+    .profile .profile-myName::after {
+        content: '';
+        display: block;
+        border-bottom: 2px solid #fff;
+        width: 200%;
+        position: relative;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+/* 직선 아래 직군표시 Game Effect Artist */
+.profile .profile-subTitle{
+    font-size: 30px;
+    margin-bottom: 20px;
+    color: #fff;
+    animation: banner 2s linear;
+    animation: maintitle 1.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    text-shadow: 2px 2px 6px black;
+}
+
+/* 메일 & 연락처 */
+.profile .profile-mail {
+    font-size: 15px;
+    margin-bottom: 10px;
+    color: #fff;
+    animation: banner 2s linear;
+    animation: maintitle 1.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    text-shadow: 2px 2px 6px black;
+    font-family: 'NanumSquare', cursive;
+}
+
+/* 한 마디 */
+.profile .profile-text {
+    color: #fff;
+    font-size: min(4vw, 20px);
+    text-align: center;
+    line-height: font-size: min(5vw, 30px);
+    animation: banner 1s linear;
+    animation: maintext 1.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+    text-shadow: 2px 2px 6px black;
+    margin: 5px;
+    margin-top: 20px;
+}
+
+.profile-text .profile-text-ko {
+    font-family: 'Bree Serif';
+}
+
+/* 섹션 2 */
+.portfolioVideoTitle {
+    text-align: center;
+    display: inline-block;
+    font-size: min(5vw, 30px);
+    color: #fff;
+    font-family: 'Bebas Neue';
+    text-shadow: 2px 2px 6px black;
+}
+
+    .portfolioVideoTitle::after {
+        content: '';
+        display: block;
+        border-bottom: 2px solid #fff;
+        width: 120%;
+        position: relative;
+        margin-top: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+
+/*  포폴 비디오 섹션 */
+.vidioSection {
+    min-height: 400px;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    padding: 10px 0px;
+    animation: banner 1s linear;
+    animation: maintext 1.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+}
+.vidioSection-wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.vidioSectionGrid-container {
+    flex-flow: row-reverse wrap;
+    position: relative;
+    display: flex;
+    margin: 20px;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    max-width: 1300px;
+    gap: 15px;
+    overflow: hidden;
+}
